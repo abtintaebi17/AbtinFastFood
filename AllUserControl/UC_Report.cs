@@ -37,7 +37,7 @@ namespace AbtinFastFood.AllUserControl
             date1 = dateTimePicker1.Value.Year + "_" + dateTimePicker1.Value.Month + "_" + dateTimePicker1.Value.Day; 
             date2 = dateTimePicker2.Value.Year + "_" + dateTimePicker2.Value.Month + "_" + dateTimePicker2.Value.Day;
 
-            query = "select * from Orderss where time '"+date1+"' and '"+date2+"'";
+            query = "select * from Orderss where time between '"+date1+"' and '"+date2+"'";
             DataSet ds = fn.GetData(query);
             dataGridView1.DataSource = ds.Tables[0];
 
